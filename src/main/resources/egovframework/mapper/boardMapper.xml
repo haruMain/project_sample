@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="BoardDAO">
+
+	<!-- 첨부파일 글등록 -->
+  	<insert id="boardInsert" parameterType="BoardVO">
+		/** BoardDAO.boardInsert */
+		INSERT INTO SYS_BOARD_TEST02 (
+					TITLE, CONTENT, ATCH_FILE_ID, INS_DT, BBS_MASTER_ID, NOTICE_YN
+			)
+		VALUES(
+					#{title}, #{content}, #{atchFileId}, sysdate(), #{bbsMasterId}, #{noticeYn}
+			)			
+	</insert>
+
+
+
+
+</mapper>
+	
